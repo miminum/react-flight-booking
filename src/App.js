@@ -10,10 +10,10 @@ class App extends Component {
         <h1>
           This is a heading
         </h1>
-        <Button title='Find Flights' primary={ true }/>
+        <Button title='Find Flights' primary/>
         <Button title='Sign Up'/>
         
-        <Button title='Enter Competition' magic={ true }/>
+        <Button title='Enter Competition' magic/>
         <ul>
           <li>First</li>
           <li>Second</li>
