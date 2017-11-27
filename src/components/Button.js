@@ -1,9 +1,10 @@
 import React from 'react'
 
 function Button({
-  title,
+  children,
   primary = false,
-  magic = false
+  magic = false,
+  href
 }) {
   let className = 'btn'
   
@@ -14,12 +15,23 @@ function Button({
   if (magic) {
     className += ' btn--rainbow'
   }
+  
+  const renderAnchor = !!href
 
-  return (
-    <button className={ className }>
-      { title }
-    </button>
-  )
+  if (renderAnchor) {
+    return (
+      <a href={ href } className={ className }>
+        { children }
+      </a>
+    )
+  }
+  else {
+    return (
+      <button className={ className }>
+      { children }
+      </button>
+    )
+  }
 
 }
 
